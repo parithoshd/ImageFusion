@@ -36,8 +36,9 @@ Because users trust the system to preserve the intent and structure of the input
 We define a **quantitative trustworthiness measure** by evaluating:
 - **Alignment between the input description and the generated image.**
 
-Specifically, we use a **CLIP-based similarity score** between the summarized prompt (describing the intended scene) and the generated image.  
-A higher score indicates stronger alignment and thus higher trustworthiness.
+We specifically leverage a **CLIP-based similarity** score to evaluate the alignment between the summarized prompt (which outlines the intended scene) and the generated image.
+A higher score reflects stronger semantic alignment and, by extension, greater trustworthiness.
+The score, often referred to as the CLIP similarity score or Image-Text Relevance Retrieval Score (IRRS), quantifies how accurately the generated image corresponds to the given text description.
 
 ---
 
@@ -62,12 +63,12 @@ A higher score indicates stronger alignment and thus higher trustworthiness.
 
 ** Prompt Image:
 <p align="center">
-  <img src="demo-images/Prompt.png" alt="Prompt" width="500">
+  <img src="demo-images/Prompt.png" alt="Prompt" width="600">
 </p>
 
 **Result 1:
 <p align="center">
-  <img src="demo-images/Prompt-Result.png" alt="Prompt Result" width="500">
+  <img src="demo-images/Prompt-Result.png" alt="Prompt Result" width="600">
 </p>
 
 ---
@@ -79,7 +80,7 @@ We explored three different approaches during evaluation:
 
  **Result 2:
 <p align="center">
-  <img src="demo-images/Low-Score.png" alt="Prompt with low score" width="500">
+  <img src="demo-images/Low-Score.png" alt="Prompt with low score" width="600">
 </p>
 
 2. We refined the prompt to make it more relevant to the provided images. For instance, we used a prompt like:
@@ -101,7 +102,7 @@ Do not create a 'panel layout', 'split panel', or 'collage layout'.
 ```
  **Result 3:
 <p align="center">
-  <img src="demo-images/Medium-Score.png" alt="Prompt with Medium score" width="500">
+  <img src="demo-images/Medium-Score.png" alt="Prompt with Medium score" width="600">
 </p>
 
 3. With a more refined and carefully structured pre-prompt, the overall prompt quality significantly improved, leading to an even higher IRRS score. We were able to achieve an IRRS score of approximately 39, showcasing a substantial improvement in semantic alignment and image relevance. This indicates that thoughtful prompt engineering plays a critical role in enhancing the final output quality and model performance when generating images based on multi-image instructions.
@@ -122,7 +123,7 @@ prompt=merged_prompt + "Strictly avoid introducing extra characters, unrelated o
 ```
 **Result 4:
 <p align="center">
-  <img src="demo-images/High-Score.png" alt="Prompt with High score" width="500">
+  <img src="demo-images/High-Score.png" alt="Prompt with High score" width="600">
 </p>
 
 ### Quantitative Evaluation
@@ -133,8 +134,10 @@ Using the CLIP model:
 
 | Model Version | Average CLIP Score (out of 100) |
 |---------------|----------------------------------|
-| Before improvements | ~25–30 |
-| After improvements  | ~70–80 |
+| Before improvements | ~10–25 |
+| After improvements  | ~25–40 |
+
+The average CLIP similarity score across multiple attempts with different prompts was approximately 35.
 
 ### Qualitative Evaluation
 
@@ -208,3 +211,6 @@ As AI systems generate more media autonomously, ensuring **intent-preserving gen
 # 📜 License
 
 This project is released for educational purposes as part of a Trustworthy AI course final project.
+
+# Contribution 
+This project was developed collaboratively by Pooja Srinivasan, Balaji Senthilkumar, and Parithosh Dharmapalan.
