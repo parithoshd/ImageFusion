@@ -76,14 +76,14 @@ The score, often referred to as the CLIP similarity score or Image-Text Relevanc
 ## 3. Evaluation and Analysis
 We explored three different approaches during evaluation:
 
-*. We used a completely unrelated prompt that had no connection to the uploaded images (using the same set of images as before) to test the system’s response. As expected, the resulting IRRS (CLIP score) was significantly lower, indicating poor alignment between the prompt and the images.
+- We used a completely unrelated prompt that had no connection to the uploaded images (using the same set of images as before) to test the system’s response. As expected, the resulting IRRS (CLIP score) was significantly lower, indicating poor alignment between the prompt and the images.
 
  **Result 2:
 <p align="center">
   <img src="demo-images/Low-Score.png" alt="Prompt with low score" width="600">
 </p>
 
-2. We refined the prompt to make it more relevant to the provided images. For instance, we used a prompt like:
+- We refined the prompt to make it more relevant to the provided images. For instance, we used a prompt like:
 "Blend image 1, image 2, and image 3 by placing the individuals from these images in a classroom setting (background from image 4) while incorporating the prop from image 5 into the scene."
 Additionally, we enhanced the prompt by applying prompt engineering — where we combined a pre-defined pre-prompt from our codebase with the user's custom prompt (using {body.prompt.strip()})  — before sending it to ChatGPT via the OpenAI API. This strategy significantly improved the output. Compared to the initial result (Result 1), where the IRRS score was 26, the updated approach raised the score around 32.
 
@@ -105,7 +105,7 @@ Do not create a 'panel layout', 'split panel', or 'collage layout'.
   <img src="demo-images/Medium-Score.png" alt="Prompt with Medium score" width="600">
 </p>
 
-3. With a more refined and carefully structured pre-prompt, the overall prompt quality significantly improved, leading to an even higher IRRS score. We were able to achieve an IRRS score of approximately 39, showcasing a substantial improvement in semantic alignment and image relevance. This indicates that thoughtful prompt engineering plays a critical role in enhancing the final output quality and model performance when generating images based on multi-image instructions.
+- With a more refined and carefully structured pre-prompt, the overall prompt quality significantly improved, leading to an even higher IRRS score. We were able to achieve an IRRS score of approximately 39, showcasing a substantial improvement in semantic alignment and image relevance. This indicates that thoughtful prompt engineering plays a critical role in enhancing the final output quality and model performance when generating images based on multi-image instructions.
 ```python
 summarization_prompt = (
     "For each image: "
