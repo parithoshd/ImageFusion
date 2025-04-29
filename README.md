@@ -161,24 +161,26 @@ The average CLIP similarity score across multiple attempts with different prompt
 
 ---
 
-## 4. Contribution Summary
+## 4. Summary
+In this project, ImageFusion, we explored the trustworthiness of AI in the context of image generation by combining multiple input images (people, backgrounds, and props) into a unified, coherent output using OpenAI's API. We designed a pipeline where user-uploaded images were processed, and a prompt describing the intended scene was generated and refined. This final prompt, after undergoing prompt engineering enhancements, was then used to guide the AI in generating the output image.
 
-- Designed and implemented a **structured prompt engineering system**.
-- Developed a **summarization pipeline** emphasizing people and context correctly.
-- Integrated **CLIP-based evaluation** for consistent trustworthiness measurement.
-- Iteratively improved prompts to maximize alignment and quality.
+To evaluate how trustworthy and accurate the AI-generated images were relative to user intent, we used the CLIP-based similarity score. This score measures how well the generated image matches the summarized description prompt, with a higher score indicating stronger alignment and thus higher trustworthiness.
+
+We evaluated the results using a CLIP-based similarity score, which measures how closely the generated image aligns with the intended prompt. Our findings showed:
+
+Unclear prompts led to low alignment scores and poor-quality outputs.
+
+Detailed user prompts significantly improved generation quality.
+
+Prompt engineering further enhanced trustworthiness, increasing the average CLIP score from 26 to around 35–39.
+
+Conclusion
+Our results emphasize that trust in AI-generated content heavily depends on prompt quality and engineering. Clear, structured instructions enable AI models to produce outputs that better reflect user intent.
+Through ImageFusion, we demonstrate that trustworthy AI generation is achievable when combining strong prompt strategies with user input, supporting the broader goal of building responsible AI systems.
 
 ---
 
-## 5. How to Run the Project
-
-- **Backend**: Python FastAPI application using OpenAI API + CLIP evaluation.
-- **Frontend**: Vite + React app for uploading images and viewing generated output.
-- **Deployment**: Localhost or can be deployed to a lightweight cloud service.
-
----
-
-## 6. Ethical and Trust Considerations
+## 5. Ethical and Trust Considerations
 
 ImageFusion aims to **build user trust** by:
 - Faithfully combining user inputs without unintended alterations.
