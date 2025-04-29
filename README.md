@@ -59,16 +59,27 @@ A higher score indicates stronger alignment and thus higher trustworthiness.
 
 **Example structured prompt**:
 > *"Combine all the images and make the persons from Image 1, Image 2, and Image 3 sit together in the background Image 4 (classroom) and study physics using the prop Image 5 (book)."*
+** Prompt Image:
 <p align="center">
   <img src="demo-images/Prompt.png" alt="Prompt" width="500">
 </p>
 
-
+**Result:
+<p align="center">
+  <img src="demo-images/Prompt-result.png" alt="Prompt" width="500">
+</p>
 
 ---
 
 ## 3. Evaluation and Analysis
-We tried with three different approaches 1st we tried to give 
+We explored three different approaches during evaluation:
+
+1. We used a completely unrelated prompt that had no connection to the uploaded images (using the same set of images as before) to test the system’s response. As expected, the resulting IRRS (CLIP score) was significantly lower, indicating poor alignment between the prompt and the images.
+
+ **Result:
+<p align="center">
+  <img src="demo-images/Prompt-result.png" alt="Prompt" width="500">
+</p>
 
 
 
