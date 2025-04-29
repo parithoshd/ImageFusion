@@ -61,7 +61,7 @@ The score, often referred to as the CLIP similarity score or Image-Text Relevanc
 **Example structured prompt**:
 > *"Combine all the images and make the persons from Image 1, Image 2, and Image 3 sit together in the background Image 4 (classroom) and study physics using the prop Image 5 (book)."*
 
-** Prompt Image:
+** Prompt Image (This reference image will be used for all the prompts showcased in the results below):
 <p align="center">
   <img src="demo-images/Prompt.png" alt="Prompt" width="600">
 </p>
@@ -76,7 +76,7 @@ The score, often referred to as the CLIP similarity score or Image-Text Relevanc
 ## 3. Evaluation and Analysis
 We explored three different approaches during evaluation:
 
-1. We used a completely unrelated prompt that had no connection to the uploaded images (using the same set of images as before) to test the system’s response. As expected, the resulting IRRS (CLIP score) was significantly lower, indicating poor alignment between the prompt and the images.
+*. We used a completely unrelated prompt that had no connection to the uploaded images (using the same set of images as before) to test the system’s response. As expected, the resulting IRRS (CLIP score) was significantly lower, indicating poor alignment between the prompt and the images.
 
  **Result 2:
 <p align="center">
