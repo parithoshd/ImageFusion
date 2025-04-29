@@ -85,7 +85,7 @@ We explored three different approaches during evaluation:
 
 - We refined the prompt to make it more relevant to the provided images. For instance, we used a prompt like:
 "Blend image 1, image 2, and image 3 by placing the individuals from these images in a classroom setting (background from image 4) while incorporating the prop from image 5 into the scene."
-Additionally, we enhanced the prompt by applying prompt engineering — where we combined a pre-defined pre-prompt from our codebase with the user's custom prompt (using {body.prompt.strip()})  — before sending it to ChatGPT via the OpenAI API. This strategy significantly improved the output. Compared to the initial result (Result 1), where the IRRS score was 26, the updated approach raised the score around 32.
+Additionally, we enhanced the prompt by applying prompt engineering — where we combined a pre-defined system prompt from our codebase with the user's custom prompt (using {body.prompt.strip()})  — before sending it to ChatGPT via the OpenAI API. This strategy significantly improved the output. Compared to the initial result (Result 1), where the IRRS score was 26, the updated approach raised the score around 32.
 
 ```python
 summarization_prompt = f"""
@@ -105,7 +105,7 @@ Do not create a 'panel layout', 'split panel', or 'collage layout'.
   <img src="demo-images/Medium-Score.png" alt="Prompt with Medium score" width="600">
 </p>
 
-- With a more refined and carefully structured pre-prompt, the overall prompt quality significantly improved, leading to an even higher IRRS score. We were able to achieve an IRRS score of approximately 39, showcasing a substantial improvement in semantic alignment and image relevance. This indicates that thoughtful prompt engineering plays a critical role in enhancing the final output quality and model performance when generating images based on multi-image instructions.
+- With a more refined and carefully structured system prompt, the overall prompt quality significantly improved, leading to an even higher IRRS score. We were able to achieve an IRRS score of approximately 39, showcasing a substantial improvement in semantic alignment and image relevance. This indicates that thoughtful prompt engineering plays a critical role in enhancing the final output quality and model performance when generating images based on multi-image instructions.
 ```python
 summarization_prompt = (
     "For each image: "
@@ -188,25 +188,6 @@ ImageFusion aims to **build user trust** by:
 - Providing a transparent, measurable trust metric (alignment score).
 
 As AI systems generate more media autonomously, ensuring **intent-preserving generation** will be crucial for user adoption, ethical responsibility, and societal trust.
-
----
-
-# 📁 Repository Structure
-
-```
-/backend
-  |-- main.py
-  |-- static/
-  |-- requirements.txt
-  |-- .env
-  |-- .gitignore
-/frontend
-  |-- src/
-  |-- public/
-  |-- package.json
-  |-- README.md
-  |-- .gitignore
-```
 
 ---
 
