@@ -89,7 +89,7 @@ Additionally, we enhanced the prompt by applying prompt engineering — where we
 ```python
 summarization_prompt = (
   "If the image contains a person, describe the person's visual elements, gender, ethnicity and physical attributes only,"
-  "ignore the background. Or else, If it contains only a background, describe the scene. If it contains only an object,
+  "ignore the background. Or else, If it contains only a background, describe the scene. If it contains only an object,"
   "describe the object's visual details. Keep it restricted to 20 words or so."
   f"\"{body.prompt.strip()}\" "
   "Blend the above elements into the main prompt above, create one continuous image."
