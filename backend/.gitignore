@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+ENV/
+env/
+
+# Environment variables
+.env
+
+# Mac system files
+.DS_Store
+
+# Static files (keep folder, ignore contents except .gitkeep if needed)
+static/*
+
+
+# Other
+*.log
+*.sqlite3
