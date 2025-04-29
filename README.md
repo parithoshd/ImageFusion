@@ -89,7 +89,7 @@ And we have also updated the code with pre-prompt (called as prompt enginnering)
 
  **Result 3:
 <p align="center">
-  <img src="demo-images/Medium-Score" alt="Prompt with low score" width="500">
+  <img src="demo-images/Medium-Score" alt="Prompt with Medium score" width="500">
 </p>
 
 
