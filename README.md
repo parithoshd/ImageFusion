@@ -51,7 +51,7 @@ A higher score indicates stronger alignment and thus higher trustworthiness.
 ### Example Prompt
 
 <p align="center">
-  <img src="demo-images/Prompt.png" alt="Prompt Image" width="400">
+  <img src="demo-images/Prompt.png" alt="Prompt Image" width="500">
 </p>
 
 
