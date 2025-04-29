@@ -50,7 +50,9 @@ A higher score indicates stronger alignment and thus higher trustworthiness.
 
 ### Example Prompt
 
-![Sample Output](demo-images/Prompt.png)
+<p align="center">
+  <img src="demo-images/Prompt.png" alt="Prompt Image" width="400">
+</p>
 
 
 
