@@ -48,14 +48,6 @@ A higher score indicates stronger alignment and thus higher trustworthiness.
 - Outputs were sometimes misaligned or hallucinated.
 - Trust was compromised due to under-specified prompts.
 
-### Example Prompt
-
-<p align="center">
-  <img src="demo-images/prompt(1).png" alt="Prompt Image" width="500">
-</p>
-
-
-
 ### Trust-Enhancing Changes in ImageFusion
 
 | Area               | Modification Implemented                                                                 |
@@ -67,10 +59,25 @@ A higher score indicates stronger alignment and thus higher trustworthiness.
 
 **Example structured prompt**:
 > *"Combine all the images and make the persons from Image 1, Image 2, and Image 3 sit together in the background Image 4 (classroom) and study physics using the prop Image 5 (book)."*
+<p align="center">
+  <img src="demo-images/Prompt.png" alt="Prompt" width="500">
+</p>
+
+
 
 ---
 
 ## 3. Evaluation and Analysis
+We tried with three different approaches 1st we tried to give 
+
+
+
+
+
+
+
+
+
 
 ### Quantitative Evaluation
 
