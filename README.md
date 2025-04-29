@@ -30,16 +30,14 @@ In many real-world applications—advertising, media generation, educational con
 Because users trust the system to preserve the intent and structure of the input images, **trustworthiness** is essential for adoption and usability.
 
 ---
-
 ### Defining Trust Quantitatively
+We establish a quantitative measure of trustworthiness by assessing:
 
-We define a **quantitative trustworthiness measure** by evaluating:
-- **Alignment between the input description and the generated image.**
+- The degree to which the generated image semantically corresponds with both the input prompt and the provided images.
 
-We specifically leverage a **CLIP-based similarity** score to evaluate the alignment between the summarized prompt (which outlines the intended scene) and the generated image.
-A higher score reflects stronger semantic alignment and, by extension, greater trustworthiness.
-The score, often referred to as the CLIP similarity score or Image-Text Relevance Retrieval Score (IRRS), quantifies how accurately the generated image corresponds to the given text description.
-
+To evaluate this alignment, we utilize a CLIP-based similarity score, which compares the summarized prompt (describing the intended scene) with the generated image.
+A higher score indicates stronger semantic alignment, suggesting greater trustworthiness of the output.
+This metric, commonly referred to as the CLIP similarity score or Image-Text Relevance Retrieval Score (IRRS), measures how closely the generated image matches the provided text description.
 ---
 
 ## 2. Implementation of Trust-Enhancing Modifications
