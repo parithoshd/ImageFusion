@@ -79,7 +79,7 @@ We explored three different approaches during evaluation:
 
  **Result 2:
 <p align="center">
-  <img src="demo-images/Low-Score" alt="Prompt with low score" width="500">
+  <img src="demo-images/Low-Score.png" alt="Prompt with low score" width="500">
 </p>
 
 2. We update the prompt with more revelevant to the images given, we gave a prompt like "Blend image 1, image 2, and image 3 by placing the people from these images studying physics within the background from image 4, while incorporating the prop from image 5 into the scene."
@@ -89,7 +89,7 @@ And we have also updated the code with pre-prompt (called as prompt enginnering)
 
  **Result 3:
 <p align="center">
-  <img src="demo-images/Medium-Score" alt="Prompt with Medium score" width="500">
+  <img src="demo-images/Medium-Score.png" alt="Prompt with Medium score" width="500">
 </p>
 
 
