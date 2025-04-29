@@ -84,7 +84,7 @@ We explored three different approaches during evaluation:
 
 2. We refined the prompt to make it more relevant to the provided images. For instance, we used a prompt like:
 "Blend image 1, image 2, and image 3 by placing the individuals from these images in a classroom setting (background from image 4) while incorporating the prop from image 5 into the scene."
-Additionally, we enhanced the prompt by applying prompt engineering — where we combined a pre-defined pre-prompt from our codebase with the user's custom prompt — before sending it to ChatGPT via the OpenAI API. This strategy significantly improved the output. Compared to the initial result (Result 1), where the IRRS score was 26, the updated approach raised the score around 32.
+Additionally, we enhanced the prompt by applying prompt engineering — where we combined a pre-defined pre-prompt from our codebase with the user's custom prompt (using {body.prompt.strip()})  — before sending it to ChatGPT via the OpenAI API. This strategy significantly improved the output. Compared to the initial result (Result 1), where the IRRS score was 26, the updated approach raised the score around 32.
 
 ```python
 summarization_prompt = f"""
@@ -99,15 +99,31 @@ Do not split the image into multiple panels or sections.
 Do not create a 'panel layout', 'split panel', or 'collage layout'.
 """
 ```
-
-
-
  **Result 3:
 <p align="center">
   <img src="demo-images/Medium-Score.png" alt="Prompt with Medium score" width="500">
 </p>
 
+3. With a more refined and carefully structured pre-prompt, the overall prompt quality significantly improved, leading to an even higher IRRS score. We were able to achieve an IRRS score of approximately 39, showcasing a substantial improvement in semantic alignment and image relevance. This indicates that thoughtful prompt engineering plays a critical role in enhancing the final output quality and model performance when generating images based on multi-image instructions.
+```python
+summarization_prompt = (
+    "For each image: "
+    "If it contains a person,you have to mention the ethnicity or skin tone, then describe the person's visible characteristics (e.g., hair color, gender, ethnicity) in about 30 words, ignoring the background. "
+    "If it contains only a background, describe the scene. "
+    "If it contains only an object, describe the object's visual details. "
+    "Do not infer or imagine missing details. Only describe what is explicitly visible."
 
+    "Then, combine the descriptions of all images into the following user instruction for the prompt: "
+    f"\"{body.prompt.strip()}\" "
+    "Create a summarized prompt that will be used as input to DALL-E 3, so prioritize clarity, key details, and visual faithfulness."
+    "The combined prompt must create a single continuous scene, not separate sections. "
+        )
+prompt=merged_prompt + "Strictly avoid introducing extra characters, unrelated objects, or changing the original elements.Depict all individuals together naturally, interacting in the same scene, avoiding separate frames or isolated" "placement.Capture the scene in highly detailed photorealistic style, with natural human features, realistic lighting, and cinematic atmosphere, as if taken by a professional camera. "
+```
+**Result 4:
+<p align="center">
+  <img src="demo-images/High-Score.png" alt="Prompt with High score" width="500">
+</p>
 
 ### Quantitative Evaluation
 
