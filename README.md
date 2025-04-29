@@ -50,6 +50,8 @@ A higher score indicates stronger alignment and thus higher trustworthiness.
 
 ### Example Prompt
 
+![Sample Output](demo-images/Prompt.png)
+
 
 
 ### Trust-Enhancing Changes in ImageFusion
