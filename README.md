@@ -168,11 +168,11 @@ To evaluate how trustworthy and accurate the AI-generated images were relative t
 
 We evaluated the results using a CLIP-based similarity score, which measures how closely the generated image aligns with the intended prompt. Our findings showed:
 
-Unclear prompts led to low alignment scores and poor-quality outputs.
+- Unclear prompts led to low alignment scores and poor-quality outputs.
 
-Detailed user prompts significantly improved generation quality.
+- Detailed user prompts significantly improved generation quality.
 
-Prompt engineering further enhanced trustworthiness, increasing the average CLIP score from 26 to around 35–39.
+- Prompt engineering further enhanced trustworthiness, increasing the average CLIP score from 26 to around 35–39.
 
 Conclusion
 Our results emphasize that trust in AI-generated content heavily depends on prompt quality and engineering. Clear, structured instructions enable AI models to produce outputs that better reflect user intent.
