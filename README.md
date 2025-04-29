@@ -15,6 +15,7 @@ Users provide:
 The system then:
 - Uses OpenAI’s vision-language model to generate a new, contextually appropriate scene.
 - Ensures that the people, background, and props are meaningfully blended.
+- Uses Dall-E 3 to generate a new image after blending all the images.
 
 ---
 
@@ -160,7 +161,18 @@ The average CLIP similarity score across multiple attempts with different prompt
 
 ---
 
-## 4. Summary
+## 4. Ethical and Trust Considerations
+
+ImageFusion aims to **build user trust** by:
+- Faithfully combining user inputs without unintended alterations.
+- Avoiding hallucinated elements or unjustified modifications.
+- Providing a transparent, measurable trust metric (alignment score).
+
+As AI systems generate more media autonomously, ensuring **intent-preserving generation** will be crucial for user adoption, ethical responsibility, and societal trust.
+
+---
+
+## 5. Summary
 In this project, ImageFusion, we explored the trustworthiness of AI in the context of image generation by combining multiple input images (people, backgrounds, and props) into a unified, coherent output using OpenAI's API. We designed a pipeline where user-uploaded images were processed, and a prompt describing the intended scene was generated and refined. This final prompt, after undergoing prompt engineering enhancements, was then used to guide the AI in generating the output image.
 
 To evaluate how trustworthy and accurate the AI-generated images were relative to user intent, we used the CLIP-based similarity score. This score measures how well the generated image matches the summarized description prompt, with a higher score indicating stronger alignment and thus higher trustworthiness.
@@ -176,17 +188,6 @@ We evaluated the results using a CLIP-based similarity score, which measures how
 Conclusion
 Our results emphasize that trust in AI-generated content heavily depends on prompt quality and engineering. Clear, structured instructions enable AI models to produce outputs that better reflect user intent.
 Through ImageFusion, we demonstrate that trustworthy AI generation is achievable when combining strong prompt strategies with user input, supporting the broader goal of building responsible AI systems.
-
----
-
-## 5. Ethical and Trust Considerations
-
-ImageFusion aims to **build user trust** by:
-- Faithfully combining user inputs without unintended alterations.
-- Avoiding hallucinated elements or unjustified modifications.
-- Providing a transparent, measurable trust metric (alignment score).
-
-As AI systems generate more media autonomously, ensuring **intent-preserving generation** will be crucial for user adoption, ethical responsibility, and societal trust.
 
 ---
 
