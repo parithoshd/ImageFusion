@@ -87,8 +87,11 @@ We explored three different approaches during evaluation:
 Additionally, we enhanced the prompt by applying prompt engineering — where we combined a pre-defined pre-prompt from our codebase with the user's custom prompt — before sending it to ChatGPT via the OpenAI API. This strategy significantly improved the output. Compared to the initial result (Result 1), where the IRRS score was 26, the updated approach raised the score around 32.
 
 ```python
-def hello():
-    print("Hello, world!")
+summarization_prompt = (
+            "If the image contains a person, describe the person's visual elements, gender, ethnicity and physical attributes only, ignore the background. Or else, If it contains only a background, describe the scene. If it contains only an object, describe the object's visual details. Keep it restricted to 20 words or so."
+            f"\"{body.prompt.strip()}\" "
+            "Blend the above elements into the main prompt above, create one continuous image. Do not introduce extra people or unrelated changes. DO NOT split the image into multiple panels or sections. Do not create 'panel layout' or a 'split panel' or'collage layout'."
+        )
 ```
 
 
