@@ -13,7 +13,7 @@ Users provide:
 - A prop image
 
 The system then:
-- Uses OpenAI’s powerful vision-language model to generate a new, contextually appropriate scene.
+- Uses OpenAI’s vision-language model to generate a new, contextually appropriate scene.
 - Ensures that the people, background, and props are meaningfully blended.
 
 ---
@@ -47,6 +47,10 @@ A higher score indicates stronger alignment and thus higher trustworthiness.
 - Images and prompts were sent to OpenAI's API without structured summarization.
 - Outputs were sometimes misaligned or hallucinated.
 - Trust was compromised due to under-specified prompts.
+
+### Example Prompt
+
+
 
 ### Trust-Enhancing Changes in ImageFusion
 
