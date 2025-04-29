@@ -82,9 +82,15 @@ We explored three different approaches during evaluation:
   <img src="demo-images/Low-Score.png" alt="Prompt with low score" width="500">
 </p>
 
-2. We update the prompt with more revelevant to the images given, we gave a prompt like "Blend image 1, image 2, and image 3 by placing the people from these images studying physics within the background from image 4, while incorporating the prop from image 5 into the scene."
+2. We refined the prompt to make it more relevant to the provided images. For instance, we used a prompt like:
+"Blend image 1, image 2, and image 3 by placing the individuals from these images in a classroom setting (background from image 4) while incorporating the prop from image 5 into the scene."
+Additionally, we enhanced the prompt by applying prompt engineering — where we combined a pre-defined pre-prompt from our codebase with the user's custom prompt — before sending it to ChatGPT via the OpenAI API. This strategy significantly improved the output. Compared to the initial result (Result 1), where the IRRS score was 26, the updated approach raised the score around 32.
 
-And we have also updated the code with pre-prompt (called as prompt enginnering), with the prompt given above we have contatinated the pre-prompt from our code and from the users prommt and fed that to ChatGPT using open AI api to imporve our prompt the results were imporved from the 1st result (Result 1) in the 1st result the irrs scores was 26 which was improved to 33. 
+```python
+def hello():
+    print("Hello, world!")
+```
+
 
 
  **Result 3:
