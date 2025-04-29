@@ -59,14 +59,15 @@ A higher score indicates stronger alignment and thus higher trustworthiness.
 
 **Example structured prompt**:
 > *"Combine all the images and make the persons from Image 1, Image 2, and Image 3 sit together in the background Image 4 (classroom) and study physics using the prop Image 5 (book)."*
+
 ** Prompt Image:
 <p align="center">
   <img src="demo-images/Prompt.png" alt="Prompt" width="500">
 </p>
 
-**Result:
+**Result 1:
 <p align="center">
-  <img src="demo-images/Prompt-result.png" alt="Prompt" width="500">
+  <img src="demo-images/Prompt-Result.png" alt="Prompt Result" width="500">
 </p>
 
 ---
@@ -76,17 +77,20 @@ We explored three different approaches during evaluation:
 
 1. We used a completely unrelated prompt that had no connection to the uploaded images (using the same set of images as before) to test the system’s response. As expected, the resulting IRRS (CLIP score) was significantly lower, indicating poor alignment between the prompt and the images.
 
- **Result:
+ **Result 2:
 <p align="center">
-  <img src="demo-images/Prompt-result.png" alt="Prompt" width="500">
+  <img src="demo-images/Low-Score" alt="Prompt with low score" width="500">
 </p>
 
+2. We update the prompt with more revelevant to the images given, we gave a prompt like "Blend image 1, image 2, and image 3 by placing the people from these images studying physics within the background from image 4, while incorporating the prop from image 5 into the scene."
+
+And we have also updated the code with pre-prompt (called as prompt enginnering), with the prompt given above we have contatinated the pre-prompt from our code and from the users prommt and fed that to ChatGPT using open AI api to imporve our prompt the results were imporved from the 1st result (Result 1) in the 1st result the irrs scores was 26 which was improved to 33. 
 
 
-
-
-
-
+ **Result 3:
+<p align="center">
+  <img src="demo-images/Medium-Score" alt="Prompt with low score" width="500">
+</p>
 
 
 
