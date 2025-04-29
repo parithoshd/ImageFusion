@@ -52,8 +52,8 @@ This metric, commonly referred to as the CLIP similarity score or Image-Text Rel
 
 | Area               | Modification Implemented                                                                 |
 |--------------------|-------------------------------------------------------------------------------------------|
-| **Prompt Design**  | Introduced a structured summarization technique: 70% focus on people, 30% focus on background and props. |
-| **Prompt Engineering** | Strict instructions for "continuous single-scene generation" (no panels, no split layouts). |
+| **Prompt Design**  | ICreated a structured summarization strategy focusing on visible human attributes, backgrounds, and objects without inferring missing details. |
+| **Prompt Engineering** | Strict instructions for "continuous single-scene generation with natural interactions" (no panels, no split layouts). |
 | **Model Usage**    | Integrated OpenAI Vision APIs thoughtfully, crafting prompts that tightly bind all user elements together. |
 | **Evaluation Metric** | Used CLIP (Contrastive Language–Image Pretraining) model to score the alignment between prompt and output. |
 
